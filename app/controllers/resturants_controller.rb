@@ -5,6 +5,7 @@ class ResturantsController < ApplicationController
 
   def show
     @resturant = Resturant.find(params[:id])
+    @review = Review.new
   end
 
   def new
