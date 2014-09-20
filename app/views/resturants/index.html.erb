@@ -1,0 +1,7 @@
+<h2>Home page of Rails Resturants</h2>
+<ul>
+<% will_paginate%>
+<% @resturants.each do |resturant| %>
+<li><%= link_to "#{resturant.name}", resturant_path(resturant) %></li>
+<%end%>
+</ul>
