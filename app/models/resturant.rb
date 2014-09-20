@@ -1,4 +1,6 @@
 class Resturant < ActiveRecord::Base
+  has_many :reviews
+
   validates :name, presence: true
   validates :address, presence: true
   validates :city, presence: true
@@ -6,7 +8,4 @@ class Resturant < ActiveRecord::Base
   validates :zipcode, presence: true
 end
 
-def self.per_page
-  10
-end
 

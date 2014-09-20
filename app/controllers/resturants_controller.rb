@@ -3,11 +3,6 @@ class ResturantsController < ApplicationController
     @resturants = Resturant.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
   end
 
-  def show
-    @resturant = Resturant.find(params[:id])
-    @review = Review.new
-  end
-
   def new
     @resturant = Resturant.new
   end
@@ -19,6 +14,11 @@ class ResturantsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @resturant = Resturant.find(params[:id])
+    @review = Review.new
   end
 
   private

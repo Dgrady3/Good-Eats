@@ -12,4 +12,25 @@
 
 <h3>Description: <%=@resturant.description%></h3>
 
-<%=link_to 'Back to resturant\'s home page', resturants_path %>
+<br>
+
+<div>
+<h3>Reviews</h3>
+<ul>
+<% @resturant.reviews.each do |review| %>
+
+    <p>Rating: <%=review.rating%><br>
+    Description: <%=review.description%></p>
+<%end%>
+</ul>
+</div>
+
+<h5>Add a review below:</h5>
+<%=link_to'Submit a review', new_resturant_review_path(@resturant) %> <br>
+
+
+<%=link_to 'Back to resturant homepage', resturants_path %>
+
+
+
+
