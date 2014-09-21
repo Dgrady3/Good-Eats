@@ -7,5 +7,3 @@ class Resturant < ActiveRecord::Base
   validates :state, presence: true
   validates :zipcode, presence: true
 end
-
-
